@@ -12,3 +12,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+laravel9-passport-server.code-workspace
+# Apache specific files:
+access.log
+apache-error.log
