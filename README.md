@@ -34,6 +34,8 @@ and ```Windows host``` file.
 - Adding auth scaffolding with Laravel/UI
 - Creating view model, migrations, controllers and seeders for Posts
 
--
+- Install & configure Passport -> Laravel Docs
+
+
 
 
