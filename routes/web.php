@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/client', [App\Http\Controllers\PassportClientController::class, 'index'])->name('client');
 
 Route::get('/posts',[PostController::class, 'index'])->name('posts.index');
 

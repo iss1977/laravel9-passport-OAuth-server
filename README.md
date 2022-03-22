@@ -35,10 +35,8 @@ and ```Windows host``` file.
 - Creating view model, migrations, controllers and seeders for Posts
     User with email 'admin@test.com' and password '12345678' will be created when seeded for admin login.
     Other 20 users and 25 Posts per user are created by seed.
-
 - Install & configure Passport -> Laravel Docs
-
 - Adding Json Resources for Users and Posts + Api Controller + api Route to be able to test the results.
-
+- Creating view and controller for displaying users clients.
 
 
