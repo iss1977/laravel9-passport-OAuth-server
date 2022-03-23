@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/client', [App\Http\Controllers\PassportClientController::class, 'index'])->name('client');
 
-Route::get('/posts',[PostController::class, 'index'])->name('posts.index');
-
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/client', [App\Http\Controllers\PassportClientController::class, 'index'])->name('client');
+    Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+});

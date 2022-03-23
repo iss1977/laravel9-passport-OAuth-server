@@ -29,7 +29,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = $request->user()->posts()->create(
+            $request->only(['title','content'])
+        );
+
+        return response()->json($post);
     }
 
     /**

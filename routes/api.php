@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:api','scopes:get-email'])->get('/user', function (Request $request) {
+    return $request->user()->makeVisible(['email']);
 });
+
+
+// create a post with Passport Api Authentication
+Route::middleware(['auth:api','scopes:create-posts'])->post('/posts', [PostController::class,'store']);
 
 
 Route::apiResource('/users/posts',PostController::class);

@@ -36,5 +36,20 @@ class AuthServiceProvider extends ServiceProvider
         Passport::refreshTokensExpireIn(now()->addDays(30));
         Passport::personalAccessTokensExpireIn(now()->addMonths(6));
 
+        // Defining scopes for the tokens
+
+        Passport::tokensCan([
+            'get-email' => 'Retrieve your email address associeted with your account.',
+            'create-posts' => 'Create posts on behalf of your user.',
+        ]);
+
+
+        // if no scopes are defined, use this scopes:
+        Passport::setDefaultScope([
+            'get-email',
+            'create-posts',
+        ]);
+
+
     }
 }
