@@ -24,5 +24,5 @@ Route::middleware(['auth:api','scopes:get-email'])->get('/user', function (Reque
 Route::middleware(['auth:api','scopes:create-posts'])->post('/posts', [PostController::class,'store']);
 
 
-Route::apiResource('/users/posts',PostController::class);
+Route::apiResource('/users/posts',PostController::class)->middleware(['auth:api','scopes:list-posts']);
 

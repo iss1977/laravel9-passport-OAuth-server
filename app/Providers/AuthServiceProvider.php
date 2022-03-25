@@ -41,6 +41,7 @@ class AuthServiceProvider extends ServiceProvider
         Passport::tokensCan([
             'get-email' => 'Retrieve your email address associeted with your account.',
             'create-posts' => 'Create posts on behalf of your user.',
+            'list-posts' => 'List posts on behalf of your user.',
         ]);
 
 
@@ -48,6 +49,7 @@ class AuthServiceProvider extends ServiceProvider
         Passport::setDefaultScope([
             'get-email',
             'create-posts',
+            'list-posts',
         ]);
 
 
